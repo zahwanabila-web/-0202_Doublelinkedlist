@@ -18,6 +18,11 @@ private:
 public:
     DoubleLinkedList()
     {
-           
+         START = NULL;  
+    }
+
+    void addNode()
+    {
+        
     }
 };
