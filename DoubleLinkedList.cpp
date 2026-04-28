@@ -50,6 +50,10 @@ public:
         }
 
         Node *current = START;
+        while (current->next != NULL && nim == current->next->noMhs < nim)
+        {
+            
+        }
 
     }
 };
