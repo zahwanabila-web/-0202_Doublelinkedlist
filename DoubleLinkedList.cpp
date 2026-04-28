@@ -156,27 +156,34 @@ public:
     {
         if (START == NULL)
         {
-            int rollNo;
-            cout << "\nEnter the roll number to search: ";
-            cin >> rollNo;
+            cout << "\nList is empty" << endl;
+            return;
+        }
 
-            Node *current = START;
+        int rollNo;
+        cout << "\nEnter the roll number to search: ";
+        cin >> rollNo;
 
-            while (current != NULL && current->noMhs != rollNo)
+         Node *current = START;
+
+        while (current != NULL && current->noMhs != rollNo)
             current = current->next;
 
-            if (current ==NULL)
-            {
-                cout << "Record not found\n";
-                cout << "Roll number: " << current->noMhs << endl;
-            }
+        if (current ==NULL)
+        {
+            cout << "Record not found\n";
+        }
+        else
+        {
+            cout << "Record not found\n";
+            cout << "Roll number: " << current->noMhs << endl;
         }
     }
 };
 
 int main()
 {
-    DoubleLinkedList;
+    DoubleLinkedList list;
     char choice;
 
     do
@@ -195,7 +202,31 @@ int main()
 
         switch (choice)
         {
+        case '1':
+            list.addNode();
+            break;
+        case '2':
+            list.hapus();
+            break;
+        case '3':
+            list.traverse();
+            break;
+        case '4':
+            list.revtraverse();
+            break;
+        case '5':
+            list.searchData();
+            break;
+        case '6':
+            return 0;
+        default:
+            cout << "Invalid option\n";
 
         }
-    }
+         cout << "\nPress Enter to continue...";
+         cin.get();
+         cin.ignore();
+         cout << endl;
+         system("clear");
+     } while (choice != '6');
 }
