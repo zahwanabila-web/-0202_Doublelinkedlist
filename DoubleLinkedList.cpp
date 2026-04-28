@@ -97,7 +97,30 @@ public:
         }
         else
         {
-            
+            current->prev->next = current->next;
+
+            if (current->next != NULL)
+                current->next->prev = current->prev;
+        }
+
+        delete current;
+        cout << "record whit roll number " << rollNo << " delete" << endl;
+    }
+    void traverse()
+    {
+        if (START == NULL)
+        {
+            cout << "\nlist is empty" << endl;
+            return;
+        }
+
+        Node *currentNode = START;
+
+        cout << "\nRecords in ascending order of rool number are:\n";
+        int i = 0;
+        while (currentNode != NULL)
+        {
+
         }
     }
 };
